@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="201.0" prefWidth="393.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+   <children>
+      <Label alignment="CENTER" prefHeight="86.0" prefWidth="393.0" text="LOGIN GIT" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_user" alignment="CENTER" layoutX="14.0" layoutY="88.0" prefHeight="25.0" prefWidth="366.0" promptText="Nome de Usuario" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <PasswordField fx:id="tf_pass" alignment="CENTER" layoutX="15.0" layoutY="121.0" promptText="Senha" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="151.0" spacing="15.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <JFXButton fx:id="btn_canelar" text="Cancelar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="brn_confirmar" text="Confirmar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

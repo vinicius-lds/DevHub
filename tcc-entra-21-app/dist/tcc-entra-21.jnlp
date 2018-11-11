@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="tcc-entra-21.jnlp">
+  <information>
+    <title>tcc-entra-21</title>
+    <vendor>104884</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\EasyDAO.jar" size="25928" download="eager" />
+    <jar href="lib\jfoenix-8.0.5.jar" size="2657082" download="eager" />
+    <jar href="lib\jsch-0.1.54.jar" size="278612" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\org.eclipse.jgit-5.0.2.201807311906-r.jar" size="2658088" download="eager" />
+    <jar href="lib\slf4j-api-2.0.99.jar" size="23759" download="eager" />
+    <jar href="lib\slf4j-simple-1.6.99.jar" size="7602" download="eager" />
+    <jar href="tcc-entra-21.jar" size="43761829" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="tcc-entra-21" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="br.com.proway.main.Main"  name="tcc-entra-21" />
+  <update check="always"/>
+</jnlp>

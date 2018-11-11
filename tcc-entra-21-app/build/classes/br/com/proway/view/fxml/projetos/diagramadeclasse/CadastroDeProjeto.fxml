@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="435.0" prefWidth="710.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.proway.controller.projetos.diagramadeclasse.CadastroDeProjetoController">
+   <children>
+      <VBox layoutX="16.0" layoutY="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane hgap="15.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="153.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane fx:id="pn_lbl" prefHeight="150.0" prefWidth="150.0">
+                     <children>
+                        <ImageView fx:id="iv_imagem" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../img/icon/icon-projeto-default.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbl_imagem" alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="150.0" text="Escolher Imagem" textAlignment="CENTER" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <VBox alignment="CENTER_RIGHT" spacing="15.0" GridPane.columnIndex="1">
+                     <children>
+                        <JFXTextField fx:id="tf_repo" labelFloat="true" promptText="Link do Repositório Git" />
+                        <JFXTextField fx:id="tf_nomeProjeto" labelFloat="true" promptText="Nome do Projeto" />
+                        <JFXButton fx:id="btn_code" text="Gerar código através do Diagrama de Classe">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <HBox>
+                           <children>
+                              <JFXButton fx:id="brn_iniciarProjeto" text="Iniciar Projeto">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="16.0" top="16.0" />
+               </padding>
+            </GridPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane GridPane.columnIndex="1">
+                     <children>
+                        <JFXButton fx:id="btn_removerUsuario" text="Remover" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="2.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Label layoutY="4.0" text="Usuários Adicionados" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Label layoutY="4.0" text="Usuários Dísponíveis" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="6.0" />
+                        <JFXButton fx:id="btn_addUsuario" text="Adicionar" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="2.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <ScrollPane fitToWidth="true" styleClass="edge-to-edge">
+               <content>
+                  <SplitPane dividerPositions="0.5" style="-fx-box-border: transparent;">
+                     <items>
+                        <VBox fx:id="vb_usuariosDisponiveis" alignment="TOP_CENTER" />
+                        <VBox fx:id="vb_usuariosSelecionados" alignment="TOP_CENTER" />
+                     </items>
+                  </SplitPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<javafx.scene.layout.Pane fx:id="root_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.proway.controller.projetos.diagramadeclasse.relacoes.RelacaoController">
+   <children>
+      <Line fx:id="ln_1" endX="0" startX="0" visible="false" />
+      <Line fx:id="ln_2" endX="0" startX="0" visible="false" />
+      <Line fx:id="ln_3" endX="0" startX="0" visible="false" />
+   </children>
+</javafx.scene.layout.Pane>

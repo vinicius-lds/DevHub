@@ -1,0 +1,28 @@
+body {
+    padding: 50px;
+}
+
+.input-group-btn-salvar {
+    margin-left: 10px;
+}
+
+.td-usuario {
+    text-align: center;
+}
+
+.tr-usuario {
+    line-height: 100px;
+}
+
+.form-group-select {
+    margin-top: 30px;
+}
+
+.foto-de-perfil {
+    height: 64px;
+    width: 64px;
+}
+
+.btn-custom {
+    margin-top: -8px;
+}

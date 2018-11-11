@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.proway.controller.main.MainController">
+   <children>
+      <AnchorPane fx:id="ap_main" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onMouseEntered="#ap_mainMouseEntered" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+      <AnchorPane fx:id="ap_options" style="-fx-background-color: white; -fx-border-color: #0047AB;" visible="false" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <VBox layoutY="144.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Hyperlink fx:id="hl_editarPerfil" alignment="CENTER" prefHeight="23.0" prefWidth="200.0" text="Editar Perfil" />
+                  <Hyperlink fx:id="hl_cadastrarUsuario" alignment="CENTER" prefHeight="23.0" prefWidth="200.0" text="Cadastrar Usuário" />
+                  <Hyperlink fx:id="hl_usuarios" alignment="CENTER" prefHeight="23.0" prefWidth="200.0" text="Usuários" />
+                  <Hyperlink fx:id="hl_novoProjeto" alignment="CENTER" prefWidth="200.0" text="Novo Projeto" />
+                  <JFXButton fx:id="btn_sair" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #0047AB;" text="Sair" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="5.0" spacing="15.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/icon/icon-projeto-default.png" />
+               </image></ImageView>
+            <Label fx:id="lbl_diagramas" onMouseClicked="#lbl_diagramasMouseClicked" onMouseEntered="#lbl_diagramasMouseEntered" onMouseExited="#lbl_diagramasMouseExited" style="-fx-opacity: 0.75;" styleClass="label-principal" text="DIAGRAMAS">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lbl_projetos" onMouseClicked="#lbl_projetosMouseClicked" onMouseEntered="#lbl_projetosMouseEntered" onMouseExited="#lbl_projetosMouseExited" style="-fx-opacity: 0.75;" styleClass="label-principal" text="PROJETOS">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <AnchorPane>
+               <children>
+                  <Label fx:id="lbl_chat" onMouseClicked="#lbl_chatMouseClicked" onMouseEntered="#lbl_chatMouseEntered" onMouseExited="#lbl_chatMouseExited" style="-fx-opacity: 0.75;" styleClass="label-principal" text="CHAT" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="4.0">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <AnchorPane fx:id="ap_chatNotificacao" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: red; -fx-background-radius: 50;" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <ImageView fx:id="iv_perfil" fitHeight="32.0" fitWidth="32.0" layoutX="606.0" layoutY="-61.0" onMouseClicked="#img_engrenagemMouseClicked" pickOnBounds="true" preserveRatio="true" styleClass="icon-principal" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../../img/icon/engrenagem.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

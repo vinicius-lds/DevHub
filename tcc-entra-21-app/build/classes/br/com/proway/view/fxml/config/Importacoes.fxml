@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.proway.view.fxml.config.ImportacoesController">
+   <children>
+      <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <JFXTextField fx:id="tf_jdk" editable="false" labelFloat="true" promptText="Localização da JDK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <JFXTextField fx:id="tf_lib" editable="false" labelFloat="true" promptText="Adicionar Jar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="250.0" styleClass="edge-to-edge">
+               <content>
+                  <VBox fx:id="vb_lib" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <JFXButton fx:id="btn_cancelar" text="Cancelar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_salvar" text="Salvar Alterações">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
